@@ -7,8 +7,9 @@
     --contact-num-and-em-hover-and-focus-color: #2196F3;
     --hero-background-color: #757575;
     --hero-name-color: #FFFFFF;
-    --modal-btn-color: #FFFFFF;
+    --modal-btn-color: #F5F4FA;
     --modal-btn-background-color: #2196F3;
+    --modal-btn-hov-and-foc-color: #F5F4FA;
     --modal-btn-background-hov-and-foc-color: #188CE8;
     --headlines-char-color: #212121;
     --headlines-char-title-color: #212121;
@@ -130,7 +131,8 @@ cursor: pointer;
 
 .modal-btn:hover,
 .modal-btn:focus {
-    background-color: var(-modal-btn-background-hov-and-foc-color);
+    color: var(--modal-btn-hov-and-foc-color);
+    background-color: var(--modal-btn-background-hov-and-foc-color);
 }
 
 /*sections*/
@@ -234,7 +236,7 @@ cursor: pointer;
 .filter-btn:hover {
     
     color: var(--filter-btn-hov-and-foc-color);
-    background-color: var(--filter-btn-background-hov-and-foc-color-hov-and-foc-color);
+    background-color: var(--filter-btn-background-hov-and-foc-color);
 
     }
 
