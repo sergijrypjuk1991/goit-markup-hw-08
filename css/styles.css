@@ -248,7 +248,7 @@ cursor: pointer;
 
     letter-spacing: 0.06em;
 
-    color: var(--project-name-color);
+    color: var(--project-name-color); 
     }
 
 .project-type {
