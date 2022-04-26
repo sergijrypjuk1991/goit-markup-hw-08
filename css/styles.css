@@ -2,7 +2,7 @@
     --logo-color-1: #2196F3;
     --logo-color-2: #000000;
     --menu-link-color: #212121;
-    --menu-link-hover-and-fokus-color: #2196F3;
+    --menu-link-name-page-color: #2196F3;
     --contact-number-and-email-color: #757575;
     --contact-num-and-em-hover-and-focus-color: #2196F3;
     --hero-background-color: #757575;
@@ -27,6 +27,9 @@
     --project-type-color: #757575;
 
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .list {
     list-style: none;
 }
@@ -34,9 +37,6 @@
     text-decoration: none;
 };
 
-.body {
-    font-family: 'Roboto', sans-serif;
-}
 /**********header*********/
 .logo-1 {
     font-family: 'Raleway', sans-serif;
@@ -55,7 +55,7 @@ letter-spacing: 0.03em;
 color: var(--logo-color-2);
 }
 
-.menu-link {;
+.menu-link {
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
@@ -63,10 +63,12 @@ letter-spacing: 0.02em;
 color: var(--menu-link-color);
 
 }
-
-.menu-link:hover, 
-.menu-link:focus {
-    color: var(--menu-link-hover-and-fokus-color);
+.menu-link-name-pages {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--menu-link-name-page-color);
 }
 
 .contact-number {
