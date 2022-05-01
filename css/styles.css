@@ -3,7 +3,7 @@
     --logo-color-2: #000000;
     --menu-link-color: #212121;
     --menu-link-name-page-color: #2196F3;
-    --contact-number-and-email-color: #757575;
+    --email-and-number-color: #757575;
     --contact-num-and-em-hover-and-focus-color: #2196F3;
     --hero-background-color: #757575;
     --hero-name-color: #FFFFFF;
@@ -11,6 +11,7 @@
     --modal-btn-background-color: #2196F3;
     --modal-btn-hov-and-foc-color: #F5F4FA;
     --modal-btn-background-hov-and-foc-color: #188CE8;
+    --headlines-bkg-color: #F5F4FA;
     --headlines-char-color: #212121;
     --headlines-char-title-color: #212121;
     --headlines-char-descr-color: #757575;
@@ -25,6 +26,7 @@
     --filter-btn-background-hov-and-foc-color: #2196F3;
     --project-name-color: #212121;
     --project-type-color: #757575;
+    --logo-color-3: #FFFFFF;
 
 }
 body {
@@ -65,7 +67,7 @@ body {
     color: var(--contact-num-and-em-hover-and-focus-color);
 
 }
-.menu-link-name-pages {
+.current {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -126,6 +128,10 @@ body {
 }
 
 /*sections*/
+.headlines {
+    background-color: var(--headlines-bkg-color);
+}
+
 .headlines-char {
     font-weight: 700;
     font-size: 36px;
@@ -250,3 +256,7 @@ body {
     letter-spacing: 0.03em;
     color: var(--project-type-color);
     }
+
+.logo-right-footer {
+    color: var(--logo-color-3);
+}
