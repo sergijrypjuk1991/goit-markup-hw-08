@@ -35,7 +35,7 @@ body {
 }
 .link {
     text-decoration: none;
-};
+}
 
 /**********header*********/
 .logo-left {
@@ -53,11 +53,16 @@ body {
 
 
 .menu-link {
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-color: var(--menu-link-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--menu-link-color);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: var(--contact-num-and-em-hover-and-focus-color);
 
 }
 .menu-link-name-pages {
@@ -68,32 +73,20 @@ color: var(--menu-link-color);
     color: var(--menu-link-name-page-color);
 }
 
-.contact-number {
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-color: var(--contact-number-and-email-color);
-}
-.contact-email {
+.email-and-number {
     font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-
-color: var(--contact-number-and-email-color);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--email-nd-number-color);
 }
 
-.contact-number:hover,
-.contact-number:focus {
+.email-and-number:hover,
+.email-and-number:focus {
   
     color: var(--contact-num-and-em-hover-and-focus-color);
 }
 
-.contact-email:hover,
-.contact-email:focus {
-  
-    color: var(--contact-num-and-em-hover-and-focus-color);
-}
 
 /**********hero************/
 
@@ -101,31 +94,29 @@ color: var(--contact-number-and-email-color);
     background-color: var(--hero-background-color);
 }
 
-.hero-name{
+.hero-name {
     font-weight: 900;
-font-size: 44px;
-line-height: 1.36;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: var(--hero-name-color);
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--hero-name-color);
 }
 
 .modal-btn {
     font-weight: 700;
-font-size: 16px;
-line-height: 1.875;
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.06em;
-
-color: var(--modal-btn-color);
-background-color: var(--modal-btn-background-color);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-cursor: pointer;
+    font-size: 16px;
+    line-height: 1.875;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--modal-btn-color);
+    -color: var(--modal-btn-background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .modal-btn:hover,
@@ -137,50 +128,46 @@ cursor: pointer;
 /*sections*/
 .headlines-char {
     font-weight: 700;
-font-size: 36px;
-line-height: 1.17;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--headlines-char-color);
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--headlines-char-color);
 }
 
 /**headlines title and description*/
 .headlines-char-title {
     font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--headlines-char-title-color);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--headlines-char-title-color);
 }
 
 
 .headlines-char-descr {
-font-size: 14px;
-line-height: 1.71;
-
-letter-spacing: 0.03em;
-color: var(--headlines-char-descr-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--headlines-char-descr-color);
 }
 
 /************workers***********/
 .workers {
     font-weight: 500;
-font-size: 16px;
-line-height: 1.19;
-
-text-align: center;
-letter-spacing: 0.03em;
-
-color: var(--workers-color);
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--workers-color);
 }
 
 .workers-prof {
-line-height: 1.19;
-
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--workers-prof-color);
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--workers-prof-color);
 }
 
 /********footer*********/
@@ -188,47 +175,57 @@ color: var(--workers-prof-color);
 .footer {
     background-color: var(--footer-background-color);
 }
+.address {
+    font-style: normal;
+}
 
 .address-physical {
-font-size: 14px;
-line-height: 1.71;
-
-letter-spacing: 0.03em;
-
-color: var(--address-physical-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--address-physical-color);
 }
 
 .address-email {
-font-size: 14px;
-line-height: 1.71;
-
-letter-spacing: 0.03em;
-
-color: var(--address-email-and-number-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--address-email-and-number-color);
 }
 
 .address-number {
-    font-family: 'Roboto', sans-serif;
-font-size: 14px;
-line-height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--address-email-and-number-color);
+}
 
-letter-spacing: 0.03em;
+.address-physical:hover,
+.address-physical:focus {
+    color: var(--contact-num-and-em-hover-and-focus-color);
+}
 
-color: var(--address-email-and-number-color);
+.address-email:hover,
+.address-email:focus {
+    color: var(--contact-num-and-em-hover-and-focus-color);
+}
+
+.address-number:hover,
+.address-number:focus {
+    color: var(--contact-num-and-em-hover-and-focus-color);
 }
 /*------------------------------------------------------------------*/
 /*portfolio*/
+
 .filter-btn {
     font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-    
-text-align: center;
-letter-spacing: 0.03em;
-    
-color: var(--filter-btn-color);
-background-color: var(--filter-btn-background-color);
-cursor: pointer;
+    font-size: 16px;
+    line-height: 1.62;   
+    text-align: center;
+    letter-spacing: 0.03em;   
+    color: var(--filter-btn-color);
+    background-color: var(--filter-btn-background-color);
+    cursor: pointer;
 }
 
 .filter-btn:focus,
@@ -236,25 +233,20 @@ cursor: pointer;
     
     color: var(--filter-btn-hov-and-foc-color);
     background-color: var(--filter-btn-background-hov-and-foc-color);
-
     }
 
 
-    .project-name {
+.project-name {
     font-weight: 700;
     font-size: 18px;
     line-height: 2.0;
-
     letter-spacing: 0.06em;
-
     color: var(--project-name-color); 
     }
 
 .project-type {
-        font-size: 16px;
+    font-size: 16px;
     line-height: 1.88;
-
     letter-spacing: 0.03em;
-
-    color: var(--project-type-color:);
+    color: var(--project-type-color);
     }
