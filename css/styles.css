@@ -55,7 +55,6 @@ img {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 1px solid red;
 }
 
 .header-container {
@@ -93,7 +92,6 @@ img {
 
 
 .menu-link {
-    outline: 1px solid blueviolet;
     display: block;
     margin-right: 50px;
     padding-top: 32px;
@@ -111,7 +109,6 @@ img {
 
 }
 .current {
-    outline: 1px solid blueviolet;
     display: block;
     margin-right: 50px;
     padding-top: 32px;
@@ -134,7 +131,6 @@ img {
 }
 
 .email-and-number {
-    outline: 1px solid royalblue;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
