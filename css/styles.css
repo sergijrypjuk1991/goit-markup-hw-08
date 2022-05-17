@@ -146,6 +146,9 @@ img {
     color: var(--contact-num-and-em-hover-and-focus-color);
 }
 
+.contact-icons {
+  fill: currentColor;
+}
 
 .email-and-tel {
     display: flex;
@@ -239,6 +242,9 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.char-icons {
+    fill: currentColor;
+}
 
 .char-list {
     display: flex;
@@ -312,6 +318,12 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--workers-prof-color);
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /********footer*********/
