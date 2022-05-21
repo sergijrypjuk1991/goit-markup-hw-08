@@ -19,6 +19,9 @@
     --workers-color: #212121; 
     --workers-prof-color: #757575;
     --border-workers-color: #EEEEEE;
+    --workers-social-icon-color: #AFB1B8;
+    --workers-social-icon-color-hover: #FFFFFF;
+    --bcg-privat-social-color-hover: #2196F3;
     --footer-background-color: #2F303A;
     --address-physical-color: #FFFFFF;
     --address-email-and-number-color: rgba(255, 255, 255, 0.6);
@@ -28,9 +31,19 @@
     --filter-btn-background-hov-and-foc-color: #2196F3;
     --project-name-color: #212121;
     --project-type-color: #757575;
+    --customer-icon-color: #AFB1B8;
+    --customer-color-hover: #2196F3;
     --logo-color-3: #FFFFFF;
+    --join-footer-color: #FFFFFF;
+    --social-back-color: #2196F3;
+    --pic-char-color: #F5F4FA;
+    --footer-privat-social-color: #FFFFFF;
+    --footer-social-bcg-color: rgba(255, 255, 255, 0.25);
+
 
 }
+
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -70,6 +83,7 @@ img {
 }
 .link {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /**********header*********/
@@ -131,6 +145,7 @@ img {
 
 .email-and-number {
     display: block;
+    justify-content: center;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -146,8 +161,19 @@ img {
     color: var(--contact-num-and-em-hover-and-focus-color);
 }
 
+.email-and-number:hover .contact-icons {
+    fill: var(--contact-num-and-em-hover-and-focus-color);
+}
+
 .contact-icons {
-  fill: currentColor;
+    align-items: baseline;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contact-icons:hover,
+.contact-icons:focus {
+fill: var(--contact-num-and-em-hover-and-focus-color);
 }
 
 .email-and-tel {
@@ -157,6 +183,7 @@ img {
 }
 
 .cont:first-child {
+    display: flex;
     margin-right: 50px;
 }
 
@@ -164,10 +191,17 @@ img {
 /**********hero************/
 
 .hero {
+    max-width: 1600px;
+    margin: 0 auto;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--hero-background-color);
+    background-image: url(../images/overlay/overlay.jpg), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 
@@ -206,6 +240,7 @@ img {
     cursor: pointer;
 }
 
+
 .char:not(:last-child) {
     max-width: 270px;
     margin-right: 30px;
@@ -242,9 +277,26 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.char-icons {
-    fill: currentColor;
+
+.pic-char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    background-color: var(--pic-char-color);
 }
+
+.social-icons {
+    fill: var(--workers-social-icon-color);
+}
+
+.privat-social:hover .social-icons,
+.privat-social:focus .social-icons {
+    fill: var(--workers-social-icon-color-hover);
+}
+
 
 .char-list {
     display: flex;
@@ -291,6 +343,12 @@ img {
 
 /************workers***********/
 
+.team {
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+                0 1px 1px 0 rgba(0, 0, 0, 0.14),
+                0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
 .employees {
     display: flex;
     align-items: center;
@@ -314,6 +372,8 @@ img {
 }
 
 .workers-prof {
+    display: block;
+    margin-bottom: 16px;
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
@@ -324,8 +384,54 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
+.icons-social:not(:last-child) {
+    margin-right: 10px;
+}
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customer {
+    display: block;
+    padding: 16px 32px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.customer:hover {
+    border-color: var(--customer-color-hover);
+}
+
+.customer-list:hover .customer-icon {
+ fill: var(--customer-color-hover);
+}
+
+.customer:not(:last-child) {
+    margin-right: 30px;
+}
+
+.customer-icon {
+    fill: var(--customer-icon-color);
+}
+
+.privat-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+
+.privat-social:hover {
+    border-radius: 50%;
+    background-color: var(--bcg-privat-social-color-hover);
+}
 /********footer*********/
 
 .footer {
@@ -339,7 +445,7 @@ img {
     font-style: normal;
 }
 
-.address-all:not(last-child) {
+.address-all:not(:last-child) {
     display: block;
     margin-bottom: 9px;
 }
@@ -364,7 +470,7 @@ img {
 .address-number {
     display: block;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--address-email-and-number-color);
 }
@@ -383,6 +489,59 @@ img {
 .address-number:focus {
     color: var(--contact-num-and-em-hover-and-focus-color);
 }
+
+.logo-right-footer {
+    color: var(--logo-color-3);
+}
+
+.join {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--join-footer-color);
+}
+
+.footer-align {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+
+}
+
+.footer-word {
+    margin-left: 0;
+    margin-right: 70px;
+}
+
+.footer-social {
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.join-social {
+    margin-right: 10px;
+}
+.privat-social-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--footer-social-bcg-color);
+}
+.privat-social-footer:hover{
+    background-color: var(--bcg-privat-social-color-hover);
+}
+.footer-pic {
+    fill: var(--footer-privat-social-color);
+}
+
 /*------------------------------------------------------------------*/
 /*portfolio*/
 
@@ -415,6 +574,7 @@ img {
     
     color: var(--filter-btn-hov-and-foc-color);
     background-color: var(--filter-btn-background-hov-and-foc-color);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
 
 .samples {
@@ -428,6 +588,10 @@ img {
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 90px) / 3);
+    
+}
+.samples-items:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-figcaption {
@@ -467,6 +631,3 @@ img {
     margin-right: 0;
 }
 
-.logo-right-footer {
-    color: var(--logo-color-3);
-}
