@@ -16,6 +16,7 @@
     --headlines-char-color: #212121;
     --headlines-char-title-color: #212121;
     --headlines-char-descr-color: #757575;
+    --product-name-color: #FFFFFF;
     --workers-color: #212121; 
     --workers-prof-color: #757575;
     --border-workers-color: #EEEEEE;
@@ -40,6 +41,7 @@
     --pic-char-color: #F5F4FA;
     --footer-privat-social-color: #FFFFFF;
     --footer-social-bcg-color: rgba(255, 255, 255, 10%);
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -112,6 +114,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--menu-link-color);
+    transition: color var(--anim);
 }
 
 .menu-link:hover,
@@ -120,6 +123,7 @@ img {
 
 }
 .current {
+    position: relative;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -128,6 +132,17 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--menu-link-name-page-color);
+}
+
+.current::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--menu-link-name-page-color);
 }
 
 .menu {
@@ -154,6 +169,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--email-and-number-color);
+    transition: color var(--anim);
 }
 
 .email-and-number:hover,
@@ -169,6 +185,7 @@ img {
 .contact-icons {
     margin-right: 10px;
     fill: currentColor;
+    transition: fill var(--anim);
 }
 
 .contact-icons:hover,
@@ -218,7 +235,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     color: var(--hero-name-color);
 }
 
-.modal-btn {
+.btn {
     min-width: 200px;
     min-height: 50px;
     padding: 10px 32px;
@@ -238,6 +255,66 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    transition: color var(--anim),
+                background-color var(--anim);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity var(--anim);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-wrapper {
+    position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    background-color: #FFFFFF;
+    width: 528px;
+    height: 581px;
+    
+}
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-form {
+    border-radius: 4 px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+                0 1px 1px 0 rgba(0, 0, 0, 0.14),
+                0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.close {
+    fill: #000000;
 }
 
 
@@ -246,8 +323,8 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     margin-right: 30px;
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.btn:hover,
+.btn:focus {
     color: var(--modal-btn-hov-and-foc-color);
     background-color: var(--modal-btn-background-hov-and-foc-color);
 }
@@ -290,7 +367,9 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 
 .social-icons {
     fill: var(--workers-social-icon-color);
+    transition: fill var(--anim);
 }
+
 
 .privat-social:hover .social-icons,
 .privat-social:focus .social-icons {
@@ -319,6 +398,30 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     align-items: center;
     justify-content: space-between;
 }
+
+.product-list {
+    position: relative;
+}
+
+.product-name {
+    position: absolute;
+    display: block;
+    padding: 27px 82px;
+    bottom: 0;
+    left: 0;
+    background-color: #2F303A; 
+    width: 100%;
+    height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.12;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--product-name-color);
+    background-color: rgba(47, 48, 58, 0.8);;
+}
+
 
 
 /**headlines title and description*/
@@ -411,11 +514,17 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border-color var(--anim);
 }
 
 .customer-list:hover,
 .customer-list:focus {
     border-color: var(--customer-color-hover);
+}
+
+.customer-icon {
+    fill: var(--customer-icon-color);
+    transition: fill var(--anim);
 }
 
 .customer-list:hover .customer-icon {
@@ -430,9 +539,6 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     margin-right: 30px;
 }
 
-.customer-icon {
-    fill: var(--customer-icon-color);
-}
 
 .privat-social {
     display: flex;
@@ -440,6 +546,8 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     align-items: center;
     width: 44px;
     height: 44px;
+    transition: border-radius var(--anim),
+                background-color var(--anim);
 }
 
 .privat-social:hover,
@@ -472,6 +580,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--address-physical-color);
+    transition: color var(--anim);
 }
 
 .address-email {
@@ -480,6 +589,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--address-email-and-number-color);
+    transition: color var(--anim);
 }
 
 .address-number {
@@ -488,6 +598,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--address-email-and-number-color);
+    transition: color var(--anim);
 }
 
 .address-physical:hover,
@@ -547,6 +658,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     height: 44px;
     border-radius: 50%;
     background-color: var(--footer-social-bcg-color);
+    transition: background-color var(--anim);
 }
 .privat-social-footer:hover,
 .privat-social-footer:focus {
@@ -583,6 +695,10 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     color: var(--filter-btn-color);
     background-color: var(--filter-btn-background-color);
     cursor: pointer;
+    transition: border-radius var(--anim),
+                color var(--anim),
+                background-color var(--anim),
+                box-shadow 250ms var(--anim);
 }
 
 
@@ -601,15 +717,43 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     margin-top: -30px;
 }
 
+
+
 .samples-items {
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 90px) / 3);
-    
+    position: relative;
 }
 
 .samples-link {
     display: block;
+    transition: box-shadow var(--anim);
+}
+
+.overlay {
+    position: absolute;
+    padding: 63px 24px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform var(--anim),
+                opacity var(--anim);
+}
+
+.samples-items:hover .overlay {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+.samples-items:focus .overlay {
+    transform: translateY(-100%);
+    opacity: 1;
 }
 
 .samples-link:hover,
