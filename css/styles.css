@@ -17,7 +17,7 @@
     --headlines-char-title-color: #212121;
     --headlines-char-descr-color: #757575;
     --product-name-color: #FFFFFF;
-    --workers-color: #212121; 
+    --workers-color: #212121;
     --workers-prof-color: #757575;
     --border-workers-color: #EEEEEE;
     --workers-social-icon-color: #AFB1B8;
@@ -50,8 +50,15 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-   
-h1, h2, h3, h4, h5, h6, p, ul {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
     margin: 0;
 }
 
@@ -84,6 +91,7 @@ img {
     margin: 0;
     padding: 0;
 }
+
 .link {
     text-decoration: none;
     cursor: pointer;
@@ -98,8 +106,9 @@ img {
     letter-spacing: 0.03em;
     color: var(--logo-color-1);
     display: block;
-    margin-right: 93px;    
+    margin-right: 93px;
 }
+
 .logo-right {
     color: var(--logo-color-2);
 }
@@ -122,6 +131,7 @@ img {
     color: var(--contact-num-and-em-hover-and-focus-color);
 
 }
+
 .current {
     position: relative;
     display: block;
@@ -174,7 +184,7 @@ img {
 
 .email-and-number:hover,
 .email-and-number:focus {
-  
+
     color: var(--contact-num-and-em-hover-and-focus-color);
 }
 
@@ -190,7 +200,7 @@ img {
 
 .contact-icons:hover,
 .contact-icons:focus {
-fill: var(--contact-num-and-em-hover-and-focus-color);
+    fill: var(--contact-num-and-em-hover-and-focus-color);
 }
 
 .email-and-tel {
@@ -218,7 +228,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 
@@ -253,10 +263,11 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     color: var(--modal-btn-color);
     background-color: var(--modal-btn-background-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: transparent;
     border-radius: 4px;
     cursor: pointer;
     transition: color var(--anim),
-                background-color var(--anim);
+        background-color var(--anim);
 }
 
 .backdrop {
@@ -275,7 +286,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%);
 }
 
 .modal-wrapper {
@@ -283,11 +294,11 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     border-radius: 4px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     width: 528px;
     height: 581px;
-    
+
 }
 
 .modal-btn {
@@ -309,8 +320,8 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 .modal-form {
     border-radius: 4 px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
-                0 1px 1px 0 rgba(0, 0, 0, 0.14),
-                0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .close {
@@ -342,6 +353,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 .headlines {
     background-color: var(--headlines-bkg-color);
 }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -405,21 +417,22 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 
 .product-name {
     position: absolute;
-    display: block;
-    padding: 27px 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 0;
     left: 0;
-    background-color: #2F303A; 
+    background-color: #2F303A;
     width: 100%;
     height: 70px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.12;
-    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--product-name-color);
-    background-color: rgba(47, 48, 58, 0.8);;
+    background-color: rgba(47, 48, 58, 0.8);
+    ;
 }
 
 
@@ -452,8 +465,8 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     border-bottom-right-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
-                0 1px 1px 0 rgba(0, 0, 0, 0.14),
-                0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .employees {
@@ -501,6 +514,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 .client {
     display: flex;
 }
+
 .customer {
     width: 170px;
     height: 92px;
@@ -547,7 +561,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     width: 44px;
     height: 44px;
     transition: border-radius var(--anim),
-                background-color var(--anim);
+        background-color var(--anim);
 }
 
 .privat-social:hover,
@@ -555,6 +569,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     border-radius: 50%;
     background-color: var(--bcg-privat-social-color-hover);
 }
+
 /********footer*********/
 
 .footer {
@@ -650,6 +665,7 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 .join-social {
     margin-right: 10px;
 }
+
 .privat-social-footer {
     display: flex;
     justify-content: center;
@@ -660,10 +676,12 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     background-color: var(--footer-social-bcg-color);
     transition: background-color var(--anim);
 }
+
 .privat-social-footer:hover,
 .privat-social-footer:focus {
     background-color: var(--bcg-privat-social-color-hover);
 }
+
 .footer-pic {
     fill: var(--footer-privat-social-color);
 }
@@ -687,28 +705,28 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
 .filter-btn {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.62;   
+    line-height: 1.62;
     text-align: center;
-    letter-spacing: 0.03em;  
+    letter-spacing: 0.03em;
     padding: 6px 22px;
-    border: transparent; 
+    border: transparent;
     color: var(--filter-btn-color);
     background-color: var(--filter-btn-background-color);
     cursor: pointer;
-    transition: border-radius var(--anim),
-                color var(--anim),
-                background-color var(--anim),
-                box-shadow 250ms var(--anim);
+    border-radius: 4px;
+    transition: 
+        color var(--anim),
+        background-color var(--anim),
+        box-shadow var(--anim);
 }
 
 
 .filter-btn:focus,
 .filter-btn:hover {
-    border-radius: 4px;
     color: var(--filter-btn-hov-and-foc-color);
     background-color: var(--filter-btn-background-hov-and-foc-color);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    }
+}
 
 .samples {
     display: flex;
@@ -731,7 +749,8 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     transition: box-shadow var(--anim);
 }
 
-.overlay {
+
+.overlay-text {
     position: absolute;
     padding: 63px 24px;
     width: 100%;
@@ -743,22 +762,29 @@ fill: var(--contact-num-and-em-hover-and-focus-color);
     opacity: 0;
     transform: translateY(0%);
     transition: transform var(--anim),
-                opacity var(--anim);
+        opacity var(--anim);
 }
 
-.samples-items:hover .overlay {
+.overlay-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.samples-items:hover .overlay-text,
+.samples-items:focus .overlay-text {
     transform: translateY(-100%);
     opacity: 1;
 }
 
-.samples-items:focus .overlay {
-    transform: translateY(-100%);
-    opacity: 1;
-}
 
 .samples-link:hover,
 .samples-link:focus {
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.samples-link:focus .overlay-text {
+    transform: translateY(-100%);
+    opacity: 1;
 }
 
 
@@ -777,15 +803,15 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     font-size: 18px;
     line-height: 2.0;
     letter-spacing: 0.06em;
-    color: var(--project-name-color); 
-    }
+    color: var(--project-name-color);
+}
 
 .project-type {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--project-type-color);
-    }
+}
 
 .logo-left-footer {
     font-family: 'Raleway', sans-serif;
@@ -798,4 +824,3 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
     margin-right: 0;
 }
-
