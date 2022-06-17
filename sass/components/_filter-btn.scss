@@ -1,0 +1,38 @@
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter-items:not(:last-child) {
+    display: block;
+    margin-right: 8px;
+}
+
+
+.filter-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding: 6px 22px;
+    border: transparent;
+    color: var(--filter-btn-color);
+    background-color: var(--filter-btn-background-color);
+    cursor: pointer;
+    border-radius: 4px;
+    transition:
+        color var(--anim),
+        background-color var(--anim),
+        box-shadow var(--anim);
+    &:focus,
+    &:hover {
+            color: var(--filter-btn-hov-and-foc-color);
+            background-color: var(--filter-btn-background-hov-and-foc-color);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+
+

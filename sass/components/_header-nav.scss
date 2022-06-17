@@ -1,0 +1,97 @@
+.menu-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--menu-link-color);
+    transition: color var(--anim);
+    &:hover,
+    &:focus {
+            color: var(--contact-num-and-em-hover-and-focus-color);
+        }
+    
+}
+
+
+.current {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--menu-link-name-page-color);
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        bottom: -1px;
+        left: 0;
+        background-color: var(--menu-link-name-page-color);
+        }
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    &:last-child {
+            margin-right: 0;
+        }
+}
+
+
+.menu-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.email-and-number {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--email-and-number-color);
+    transition: color var(--anim);
+    &:hover,
+    &:focus {
+            color: var(--contact-num-and-em-hover-and-focus-color);
+        }
+    &:hover .contact-icons {
+            fill: var(--contact-num-and-em-hover-and-focus-color);
+        }
+}
+
+
+.contact-icons {
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill var(--anim);
+    &:hover,
+    &:focus {
+            fill: var(--contact-num-and-em-hover-and-focus-color);
+        }
+}
+
+
+.email-and-tel {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.cont:first-child {
+    display: flex;
+    margin-right: 50px;
+}

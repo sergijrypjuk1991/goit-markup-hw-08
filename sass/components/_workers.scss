@@ -1,0 +1,90 @@
+.headlines-char {
+    display: block;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--headlines-char-color);
+}
+
+
+.social-icons {
+    fill: var(--workers-social-icon-color);
+    transition: fill var(--anim);
+}
+
+.team {
+    border-color: rgba(238, 238, 238, 1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.employees {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.index-figcaption {
+    display: block;
+    padding: 30px 0;
+}
+
+.workers {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--workers-color);
+}
+
+.workers-prof {
+    display: block;
+    margin-bottom: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--workers-prof-color);
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icons-social:not(:last-child) {
+    margin-right: 10px;
+}
+
+.privat-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    transition: border-radius var(--anim),
+        background-color var(--anim);
+    &:hover .social-icons,
+    &:focus .social-icons {
+            fill: var(--workers-social-icon-color-hover);
+        }
+    &:hover,
+    &:focus {
+            border-radius: 50%;
+            background-color: var(--bcg-privat-social-color-hover);
+        }
+}
+
+
+
