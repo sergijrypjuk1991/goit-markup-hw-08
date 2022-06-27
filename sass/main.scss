@@ -1,5 +1,7 @@
 @import './utils/vars';
 @import './utils/base';
+@import './utils/container';
+@import './utils/section';
 @import './components/header';
 @import './components/logo';
 @import './components/header-nav';
@@ -10,9 +12,7 @@
 @import './components/product';
 @import './components/workers';
 @import './components/clients';
-@import './components/footer-address';
-@import './components/footer-join';
-@import './components/footer-form';
+@import './components/footer';
 //portfolio//
 @import './components/filter-btn';
 @import './components/samples';

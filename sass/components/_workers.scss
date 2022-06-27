@@ -1,18 +1,31 @@
 .headlines-char {
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--headlines-char-color);
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;    
+    }
 }
 
-
-.social-icons {
-    fill: var(--workers-social-icon-color);
-    transition: fill var(--anim);
+.employees {
+ 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -30px;
+            margin-top: -30px;
+        }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .team {
@@ -23,12 +36,26 @@
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 1px 0 rgba(0, 0, 0, 0.14),
         0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-left: 30px;
+            margin-top: 30px;
+            width: calc((100% - 60px) / 2);
+        }
 }
 
-.employees {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.team__img {
+    @media screen and (max-width: 1199px) {
+        width: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+    }
+
 }
 
 .index-figcaption {
@@ -75,16 +102,32 @@
     height: 44px;
     transition: border-radius var(--anim),
         background-color var(--anim);
+
     &:hover .social-icons,
     &:focus .social-icons {
-            fill: var(--workers-social-icon-color-hover);
-        }
+        fill: var(--workers-social-icon-color-hover);
+    }
+
     &:hover,
     &:focus {
-            border-radius: 50%;
-            background-color: var(--bcg-privat-social-color-hover);
-        }
+        border-radius: 50%;
+        background-color: var(--bcg-privat-social-color-hover);
+    }
 }
+
+.social-icons {
+    fill: var(--workers-social-icon-color);
+    transition: fill var(--anim);
+}
+
+
+
+
+
+
+
+
+
 
 
 

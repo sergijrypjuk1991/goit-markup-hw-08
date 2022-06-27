@@ -1,23 +1,36 @@
 .samples {
+    @media screen and (min-width: 767px) {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
+    }
+    
 }
 
-
-
 .samples-items {
-    margin-left: 30px;
-    margin-top: 30px;
-    flex-basis: calc((100% - 90px) / 3);
     position: relative;
-    &:hover .overlay-text,
-    &:focus .overlay-text {
+        @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+                width: 100%;
+            }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+                margin-left: 30px;
+                margin-top: 30px;
+                flex-basis: calc((100% - 60px) / 2);
+            }
+        @media screen and (min-width: 1200px) {
+                margin-left: 30px;
+                margin-top: 30px;
+                flex-basis: calc((100% - 90px) / 3);
+        }
+
+        &:hover .overlay-text,
+        &:focus .overlay-text {
             transform: translateY(-100%);
             opacity: 1;
         }
-}
+    }
 
 .samples-link {
     display: block;
@@ -32,10 +45,26 @@
         }
 }
 
+.overlay-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-img {
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+        
+}
+}
 
 .overlay-text {
     position: absolute;
-    padding: 63px 24px;
     width: 100%;
     font-size: 18px;
     line-height: 1.56;
@@ -46,13 +75,16 @@
     transform: translateY(0%);
     transition: transform var(--anim),
         opacity var(--anim);
+    @media screen and (max-width: 767px) {
+        padding: 77px 24px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 49px 24px 77px 24px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 63px 24px;
 }
-
-.overlay-img {
-    position: relative;
-    overflow: hidden;
 }
-
 
 .portfolio-figcaption {
     display: block;

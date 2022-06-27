@@ -1,13 +1,33 @@
 .filter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: start;
+    margin-bottom: 40px;
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        justify-content: center;
+    }
 }
 
-.filter-items:not(:last-child) {
+.filter-items {
     display: block;
     margin-right: 8px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+    &:not(:last-child) {
+        @media screen and (min-width: 768px) {
+            margin-right: 8px;
+        }
+    }
+    
 }
 
 
