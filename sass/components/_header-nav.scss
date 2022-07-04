@@ -1,4 +1,8 @@
 .menu-link {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -12,11 +16,16 @@
     &:focus {
             color: var(--contact-num-and-em-hover-and-focus-color);
         }
-    
+    }
+  
 }
 
 
 .current {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
     position: relative;
     display: block;
     padding-top: 32px;
@@ -36,6 +45,7 @@
         left: 0;
         background-color: var(--menu-link-name-page-color);
         }
+    }
 }
 
 
@@ -86,12 +96,78 @@
 
 
 .email-and-tel {
+    @media screen and (max-width: 767.98px) {
+     display: none;   
+    }
+    @media screen and (min-width: 798px) and (max-width: 1199.98px) {
+    
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
     display: flex;
     margin-left: auto;
     align-items: center;
+    }
 }
 
-.cont:first-child {
-    display: flex;
-    margin-right: 50px;
+.cont:not(:last-child) {
+    //display: flex;
+    //@media screen  and (min-width: 768px) and (max-width: 1199.98px) {
+        //flex-direction: column;
+        margin-bottom: 10px;
+    //}
+    @media screen and (min-width: 1200px) {
+    margin-right: 50px;    
+    }  
 }
+
+.menu-button {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+        display: inline-flex;
+            margin-right: 0;
+            margin-left: auto;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            z-index: 1000;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }     
+}  
+
+
+.menu-button .icon-cross {
+    display: none;
+}
+
+.menu-button.is-open .icon-cross {
+    display: block;
+}
+
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+
+.icon-cross {
+    fill: #212121;
+    transition: fill var(--anim);
+    &:hover,
+    &:focus {
+        fill: #2196F3;
+    }
+}
+
+.icon-menu {
+    fill: #212121;
+    transition: fill var(--anim);
+    &:hover,
+    &:focus {
+        fill: #2196F3;
+    }
+}
+
+
