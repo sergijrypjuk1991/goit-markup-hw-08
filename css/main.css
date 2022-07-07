@@ -147,9 +147,11 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -161,8 +163,24 @@ img {
   letter-spacing: 0.03em;
   color: var(--logo-color-1);
   display: block;
-  margin-right: 93px;
-  padding: 16px;
+  padding-top: 16px;
+  padding-right: 0;
+  padding-bottom: 15px;
+  padding-left: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .logo-left {
+    padding-top: 26px;
+    padding-right: 88px;
+    padding-bottom: 26px;
+    padding-left: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-left {
+    padding-right: 93px;
+    margin-left: auto;
+  }
 }
 
 .logo-right {
@@ -254,6 +272,12 @@ img {
   -webkit-transition: color var(--anim);
   transition: color var(--anim);
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .email-and-number {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 .email-and-number:hover, .email-and-number:focus {
   color: var(--contact-num-and-em-hover-and-focus-color);
 }
@@ -278,6 +302,9 @@ img {
 }
 @media screen and (min-width: 798px) and (max-width: 1199.98px) {
   .email-and-tel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -298,8 +325,18 @@ img {
   }
 }
 
-.cont:not(:last-child) {
-  margin-bottom: 10px;
+.cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cont:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .cont:not(:last-child) {
@@ -308,9 +345,10 @@ img {
 }
 
 .menu-button {
-  position: fixed;
+  position: absolute;
   right: 15px;
   top: 10px;
+  padding: 1px 6px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

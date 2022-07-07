@@ -12,6 +12,7 @@
     letter-spacing: 0.02em;
     color: var(--menu-link-color);
     transition: color var(--anim);
+ 
     &:hover,
     &:focus {
             color: var(--contact-num-and-em-hover-and-focus-color);
@@ -74,6 +75,11 @@
     letter-spacing: 0.02em;
     color: var(--email-and-number-color);
     transition: color var(--anim);
+    @media screen and (min-width: 768px) and (max-width:1199.98px) {
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
     &:hover,
     &:focus {
             color: var(--contact-num-and-em-hover-and-focus-color);
@@ -97,10 +103,10 @@
 
 .email-and-tel {
     @media screen and (max-width: 767.98px) {
-     display: none;   
+    display: none;   
     }
     @media screen and (min-width: 798px) and (max-width: 1199.98px) {
-    
+    display: flex;
     flex-direction: column;
     margin-right: 0;
     margin-left: auto;
@@ -112,21 +118,32 @@
     }
 }
 
-.cont:not(:last-child) {
-    //display: flex;
-    //@media screen  and (min-width: 768px) and (max-width: 1199.98px) {
-        //flex-direction: column;
-        margin-bottom: 10px;
-    //}
-    @media screen and (min-width: 1200px) {
-    margin-right: 50px;    
-    }  
+.cont {
+    display: flex;
+    justify-content: baseline;
+    &:not(:last-child) {
+    
+            //display: flex;
+            //@media screen  and (min-width: 768px) and (max-width: 1199.98px) {
+            //flex-direction: column;
+            //margin-bottom: 10px;
+            //}
+            @media screen and (min-width: 768px) and (max-width:1199.98px) {
+                margin-bottom: 10px;
+            }
+    
+            @media screen and (min-width: 1200px) {
+                margin-right: 50px;
+            }
+        }
 }
 
+
 .menu-button {
-    position: fixed;
+    position: absolute;
     right: 15px;
     top: 10px;
+    padding: 1px 6px;
         display: inline-flex;
             margin-right: 0;
             margin-left: auto;

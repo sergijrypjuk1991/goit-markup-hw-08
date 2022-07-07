@@ -6,8 +6,23 @@
     letter-spacing: 0.03em;
     color: var(--logo-color-1);
     display: block;
-    margin-right: 93px;
-    padding: 16px;
+    padding-top: 16px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    //
+    @media screen and (min-width:768px) and (max-width: 1199.98px) {
+      padding-top: 26px;
+      padding-right: 88px;
+      padding-bottom: 26px;
+      padding-left: 0px;  
+    }
+    @media screen and (min-width: 1200px) {
+        padding-right: 93px;
+        margin-left: auto;
+    }
+    
+    
 }
 
 .logo-right {
