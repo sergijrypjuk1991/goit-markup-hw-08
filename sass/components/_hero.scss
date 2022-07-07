@@ -5,7 +5,46 @@
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--hero-background-color);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay/overlay.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../images/overlay/overlay_mob.jpg);
+    background-image: -webkit-image-set(url(../images/overlay/overlay_mob.webp) 1x),
+                        linear-gradient(to right, rgba(47, 48, 58, 0.4));
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/overlay/overlay@2x_mob.jpg);
+            background-image: -webkit-image-set(url(../images/overlay/overlay@2x_mob.webp) 2x),
+                        linear-gradient(to right, rgba(47, 48, 58, 0.4));
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+             url(../images/overlay/overlay_tab.jpg); 
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    -webkit-image-set (url(../images/overlay/overlay_tab.webp) 1x);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        url(../images/overlay/overlay@2x_tab.jpg);
+                        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        -webkit-image-set (url(../images/overlay/overlay@2x_tab.webp) 2x);
+                }
+        }
+        @media screen and (min-width: 1200px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/overlay/overlay_desk.jpg);
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    -webkit-image-set (url(../images/overlay/overlay_desk.webp) 1x);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        url(../images/overlay/overlay@2x_desk.jpg);
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                            -webkit-image-set (url(../images/overlay/overlay@2x_desk.webp) 2x);
+                }
+        }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

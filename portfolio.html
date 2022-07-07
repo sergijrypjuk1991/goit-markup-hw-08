@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="header"><!--
+    <header class="header">
         <div class="container header-container">
             <a class="logo-left link" href="./index.html" lang="en">Web<span class="logo-right">Studio</span></a>
             <nav class="header-nav">
@@ -44,8 +44,36 @@
                         +38 096 111 1111</a>
                 </li>
             </ul>
+                <button type="button" class="menu-button is-open" data-menu-button>
+                <svg 
+                    width="40" 
+                    height="40" 
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                    aria-label="переключатель мобильного меню">
+                    <use class="icon-cross" href="./images/icons.svg#cross"></use>
+                    <use class="icon-menu" href="./images/icons.svg#menu"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu is-open" id="mobile-menu" data-menu>
+                <ul class="mobile-menu__nav">
+                    <li class="mobile-menu__nav-item list"><a href="./index.html" class="mobile-menu__nav-link link" >Студия</a></li>
+                    <li class="mobile-menu__nav-item list"><a href="" class="mobile-menu__nav-link  mobile-menu__nav-link--color link" >Портфолио</a></li>
+                    <li class="mobile-menu__nav-item list"><a href="" class="mobile-menu__nav-link link">Контакты</a></li>
+                </ul>
+                <ul class="mobile-menu__contacts">
+                    <li class="mobile-menu__contacts-item list"><a href="" class="mobile-menu__contacts-tel link"  lang="en" href="tel:+38 096 111 11 11">+38 096 111 11 11</a></li>
+                    <li class="mobile-menu__contacts-item list"><a href="" class="mobile-menu__contacts-email link"  href="emailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+                <ul class="mobile-menu__socials">
+                    <li class="mobile-menu__socials-item list"><a href="" class="mobile-menu__socials-link link" lang="en">Instagram</a></li>
+                    <li class="mobile-menu__socials-item list"><a href="" class="mobile-menu__socials-link link" lang="en">Twitter</a></li>
+                    <li class="mobile-menu__socials-item list"><a href="" class="mobile-menu__socials-link link" lang="en">Facebook</a></li>
+                    <li class="mobile-menu__socials-item list"><a href="" class="mobile-menu__socials-link link" lang="en">Linkedin</a></li>
+                </ul>
+            </div>
         </div>
-    </header>-->
+    </header>
     <main>
         <section class="section">
             <div class="container">
@@ -61,7 +89,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                         <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/techn.jpg" alt="макет сайта Технокряк">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/techn_desk.jpg 1x, ./images/portfolio-main/techn@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/techn_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/techn@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/techn_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/techn@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/techn.jpg" alt="макет сайта Технокряк" loading="lazy">
+                                            </picture>
                                             <p class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -74,7 +110,19 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                         <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/poster.jpg" alt="постер баскетболистов">
+                                                <picture>
+                                                    <source media="(min-width: 1200px)"
+                                                        srcset="./images/portfolio-main/poster_desk.jpg 1x, ./images/portfolio-main/poster@2x_desk.jpg 2x"
+                                                        type="image/jpg" />
+                                                    <source media="(min-width: 768px)"
+                                                        srcset="./images/portfolio-main/poster_tab.jpg 1x, 
+                                                                ./images/portfolio-main/poster@2x_tab.jpg 2x" type="image/jpg" />
+                                                    <source media="(min-width: 480px)"
+                                                        srcset="./images/portfolio-main/poster_mob.jpg 1x,
+                                                                ./images/portfolio-main/poster@2x_mob.jpg 2x"
+                                                        type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/poster.jpg" alt="постер баскетболистов" loading="lazy">
+                                                </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                                 получить
                                                 исчерпывающие сведения компании или частном лице.</P>
@@ -88,7 +136,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                         <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/restaraunt.jpg" alt="иконка ресторана в приложении">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/restaraunt_desk.jpg 1x, ./images/portfolio-main/restaraunt@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/restaraunt_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/restaraunt@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/restaraunt_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/restaraunt@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/restaraunt.jpg" alt="иконка ресторана в приложении" loading="lazy">
+                                            </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -101,7 +157,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                             <div class="overlay-box">
-                                                <img class="overlay-img" src="./images/portfolio-main/headphones.jpg" alt="иконка ресторана в приложении">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/headphones_desk.jpg 1x, ./images/portfolio-main/headphones@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/headphones_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/headphones@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/headphones_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/headphones@2x_mob.jpg 2x" type="image/jpg" />
+                                                <img class="overlay-img" src="./images/portfolio-main/headphones.jpg" alt="иконка ресторана в приложении" loading="lazy">
+                                            </picture>
                                                 <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                                     это позволит посетителю получить
                                                     исчерпывающие сведения компании или частном лице.</P>
@@ -114,7 +178,15 @@
                                             <li class="samples-items">
                                                 <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                             <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/project.jpg" alt="иконка приложения с двумя паралелепипедами">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/project_desk.jpg 1x, ./images/portfolio-main/project@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/project_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/project@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/project_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/project@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/project.jpg" alt="иконка приложения с двумя паралелепипедами" loading="lazy">
+                                            </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -127,7 +199,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                         <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/monitor.jpg" alt="монитор с эскизом сайта">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/monitor_desk.jpg 1x, ./images/portfolio-main/monitor@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/monitor_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/monitor@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/monitor_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/monitor@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/monitor.jpg" alt="монитор с эскизом сайта" loading="lazy">
+                                            </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -140,7 +220,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                             <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/book.jpg" alt="дизайн книги">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/book_desk.jpg 1x, ./images/portfolio-main/book@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/book_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/book@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/book_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/book@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/book.jpg" alt="дизайн книги" loading="lazy">
+                                            </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -153,7 +241,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                             <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/tag.jpg" alt="бирка">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/tag_desk.jpg 1x, ./images/portfolio-main/tag@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/tag_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/tag@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/tag_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/tag@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/tag.jpg" alt="бирка" loading="lazy">
+                                            </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -166,7 +262,15 @@
                                     <li class="samples-items">
                                         <a class="samples-link link" href="" target="_blank" rel="noopener norefferrer">
                                         <div class="overlay-box">
-                                            <img class="overlay-img" src="./images/portfolio-main/addition.jpg" alt="разработка приложения на ноутбуке">
+                                            <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="./images/portfolio-main/addition_desk.jpg 1x, ./images/portfolio-main/addition@2x_desk.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 768px)" srcset="./images/portfolio-main/addition_tab.jpg 1x, 
+                                                                                    ./images/portfolio-main/addition@2x_tab.jpg 2x" type="image/jpg" />
+                                            <source media="(min-width: 480px)" srcset="./images/portfolio-main/addition_mob.jpg 1x,
+                                                                                        ./images/portfolio-main/addition@2x_mob.jpg 2x" type="image/jpg" />
+                                            <img class="overlay-img" src="./images/portfolio-main/addition.jpg" alt="разработка приложения на ноутбуке" loading="lazy">
+                                            </picture>
                                             <P class="overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                             исчерпывающие сведения  компании или частном лице.</P>
                                         </div>
@@ -248,6 +352,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
     </body>
     
     </html>
