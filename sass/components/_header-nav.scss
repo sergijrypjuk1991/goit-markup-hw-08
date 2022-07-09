@@ -54,9 +54,17 @@
 .menu {
     display: flex;
     align-items: center;
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
+        //margin-top: 32px;
+        
+    }
     &:last-child {
             margin-right: 0;
         }
+
 }
 
 
@@ -105,7 +113,7 @@
     @media screen and (max-width: 767.98px) {
     display: none;   
     }
-    @media screen and (min-width: 798px) and (max-width: 1199.98px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     display: flex;
     flex-direction: column;
     margin-right: 0;

@@ -8,6 +8,7 @@
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     height: auto;
+    animation: shadow-drop-2-center .4s ease-in infinite none;
     @media screen and (max-width: 479px) {
         width: 100%;
     }
@@ -18,6 +19,22 @@
         width: 528px;
     }
 }
+
+@keyframes shadow-drop-2-center {
+  0% {
+
+            //transform: translateZ(0);
+
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+
+            //transform: translateZ(100px);
+
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
 
 .modal-btn {
     position: absolute;
@@ -47,7 +64,7 @@
     letter-spacing: 0.03em;
     color: #212121;
     @media screen and (min-width: 1200px) {
-    height: 60px;
+    height: 23px;
     }
 }
 
@@ -216,4 +233,9 @@
 
 .close {
     fill: #000000;
+    transition: fill var(--anim);
+    &:hover,
+    &:focus {
+        fill: #2196F3;
+    }
 }

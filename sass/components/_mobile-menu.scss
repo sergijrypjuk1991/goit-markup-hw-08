@@ -14,13 +14,12 @@
     padding-bottom: 48px;
     padding-left: 40px;
     overflow-y: scroll;
-    z-index: 10;
-        
+    z-index: 10;   
     }
 
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .mobile-menu__nav {
@@ -36,8 +35,9 @@
 
 .mobile-menu__nav-link {
     font-size: 40px;
+    font-weight: 500;
     line-height: 1.18;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
     color: #212121;
     &:hover,
     &:focus {
@@ -64,15 +64,17 @@
 
 .mobile-menu__contacts-tel {
     font-size: 34px;
+    font-weight: 500;
     line-height: 1.18;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
     color: #2196F3;
 }
 
 .mobile-menu__contacts-email {
     font-size: 24px;
+    font-weight: 500;
     line-height: 1.17;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
     color: #757575;
 }
 
@@ -93,7 +95,8 @@
 
 .mobile-menu__socials-link {
     font-size: 18px;
+    font-weight: 500;
     line-height: 1.04;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
     color: #2196F3;
 }
