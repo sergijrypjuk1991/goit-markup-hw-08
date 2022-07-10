@@ -1440,8 +1440,12 @@ img {
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .logo-left-footer {
-    margin-left: auto;
-    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 24px;
     line-height: 1.17;
   }
@@ -1501,6 +1505,17 @@ img {
   -webkit-transition: color var(--anim);
   transition: color var(--anim);
 }
+@media screen and (min-width: 468px) and (max-width: 1199.98px) {
+  .address-physical {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 8px;
+  }
+}
 .address-physical:hover, .address-physical:focus {
   color: var(--contact-num-and-em-hover-and-focus-color);
 }
@@ -1514,6 +1529,17 @@ img {
   -webkit-transition: color var(--anim);
   transition: color var(--anim);
 }
+@media screen and (min-width: 468px) and (max-width: 1199.98px) {
+  .address-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 8px;
+  }
+}
 .address-email:hover, .address-email:focus {
   color: var(--contact-num-and-em-hover-and-focus-color);
 }
@@ -1526,6 +1552,17 @@ img {
   color: var(--address-email-and-number-color);
   -webkit-transition: color var(--anim);
   transition: color var(--anim);
+}
+@media screen and (min-width: 468px) and (max-width: 1199.98px) {
+  .address-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 8px;
+  }
 }
 .address-number:hover, .address-number:focus {
   color: var(--contact-num-and-em-hover-and-focus-color);
